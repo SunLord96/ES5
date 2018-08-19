@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Arrow function
+        var a = () => {};
+        console.log(a);
+    
+        var b = 5;
+        var a = (b) => b*2;
+        console.log(a);
+
+        //Map() có thể dùng arrow function kết hợp 
+        const double = [1,2,3].map((num) => num * 2);
+        console.log(double); // [2,4,6]
+        
+        //Map() có 2 giá trị truyền vào arrow function có giá trị truyền vào là là index và value
+        const mapdemo =[1,2,3].map((index,value) => index*value);
+        console.log(mapdemo); // [0,2,6]
+
+        //Map() có thể sử dụng các hàm f(x) xử lí giá trị của từng phần tử 1
+        const mapdemo2 =[1,4,9].map(Math.sqrt);
+        console.log(mapdemo2); //[1,2,3]
+
+        //Map() có thể sử dụng các giá trị của giá trị truyền vào đến từ giá trị của mảng
+         const mapdemo3 =[1,4,9].map(function(index ,value){
+            //  return index * value * 2;
+         });
+        console.log(mapdemo3); // [0,8,36]  
+
+        //Map() không có native với object nên dùng với array , tuy nhiên cũng có cách
+        myObject = { 'value1': 1, 'value2': 2, 'value3': 3 }
+        Object.keys(myObject).map(function(key, index) {
+            myObject[key] *= 2;
+        }); // {value1: 2, value2: 4, value3: 6}
+        console.log(myObject);
+
+        
+    </script>
+</body>
+</html>

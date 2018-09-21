@@ -40,7 +40,10 @@
             myObject[key] *= 2;
         }); // {value1: 2, value2: 4, value3: 6}
         console.log(myObject);
-
+       
+        //Filter() kết hợp với arrow function
+         const inventors= [{name:sun,year:1533},{name:sun,year:1602}]
+         const inventors2 = inventors.filter(value => value.year > 1500 && value.year < 1600);
         
     </script>
 </body>
